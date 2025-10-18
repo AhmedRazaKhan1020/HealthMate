@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 
 
-const index = () => {
+const Index = () => {
 const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -46,4 +46,4 @@ const [isOpen, setIsOpen] = useState(false);
   )
 }
 
-export default index
+export default Index
