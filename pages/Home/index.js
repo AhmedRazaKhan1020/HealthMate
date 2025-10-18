@@ -23,8 +23,8 @@ const WelcomePage = () => {
   if (!token) return null;
 
   return (
-      <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center md:mr-25">
-      
+    <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center md:mr-25">
+
       {/* Header Section */}
       <div className="max-w-3xl">
         <div className="flex justify-center mb-4">
@@ -34,7 +34,7 @@ const WelcomePage = () => {
           Welcome to <span className="text-green-700">HealthMate</span>
         </h1>
         <p className="text-gray-600 text-lg mb-6">
-          Your smart medical companion — upload reports, get instant AI insights, and stay informed about your health 🩺
+          Your smart medical companion — upload reports, get instant AI insights, and stay informed about your health 
         </p>
 
         <Link
@@ -79,7 +79,7 @@ const WelcomePage = () => {
       {/* Reviews Section */}
       <div className="max-w-5xl mt-16 w-full">
         <h2 className="text-2xl font-bold text-[#8bc339] mb-8">
-          What Our Users Say ❤️
+          What Our Users Say 
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -100,7 +100,7 @@ const WelcomePage = () => {
             },
             {
               name: "Sara Malik",
-              text: "Finally, an app that simplifies medical reports for normal people. 100% recommend 💚",
+              text: "Finally, an app that simplifies medical reports for normal people. 100% recommend ",
               rating: 5,
               image:
                 "https://randomuser.me/api/portraits/women/44.jpg",

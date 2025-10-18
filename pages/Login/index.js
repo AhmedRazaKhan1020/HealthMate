@@ -38,9 +38,9 @@ const Login = () => {
 
       const result = await res.json();
       if (res.ok) {
-         if (result.token) {
-        localStorage.setItem("token", result.token);
-      }
+        if (result.token) {
+          localStorage.setItem("token", result.token);
+        }
         toast.success("Login Successful!");
         router.push("/Home"); // uncomment if needed
       } else {
@@ -53,9 +53,9 @@ const Login = () => {
       setLoading(false);
     }
   };
- 
+
   return (
- <section className="min-h-screen relative flex flex-col lg:flex-row items-center justify-center px-6 py-12 bg-gradient-to-br from-green-50 via-white to-green-100 overflow-hidden">
+    <section className="min-h-screen relative flex flex-col lg:flex-row items-center justify-center px-6 py-12 bg-gradient-to-br from-green-50 via-white to-green-100 overflow-hidden">
       <ToastContainer position="top-center" hideProgressBar theme="dark" />
 
       {/* Left: Welcome Content */}
@@ -68,7 +68,7 @@ const Login = () => {
         </h1>
         <p className="text-gray-600 text-lg leading-relaxed">
           Your smart medical companion — upload reports, get instant AI insights,
-          and stay informed about your health 🩺
+          and stay informed about your health
         </p>
       </div>
 
@@ -126,9 +126,8 @@ const Login = () => {
         <button
           type="submit"
           onClick={handleSubmit}
-          className={`w-full bg-[#8bc339] hover:bg-[#7bb32f] py-3 rounded-full text-lg font-semibold text-white shadow-lg transition-all duration-300 ${
-            loading ? "opacity-70 cursor-not-allowed" : ""
-          }`}
+          className={`w-full bg-[#8bc339] hover:bg-[#7bb32f] py-3 rounded-full text-lg font-semibold text-white shadow-lg transition-all duration-300 ${loading ? "opacity-70 cursor-not-allowed" : ""
+            }`}
         >
           {loading ? "Logging in..." : "Login"}
         </button>

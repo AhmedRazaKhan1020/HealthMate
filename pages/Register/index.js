@@ -70,7 +70,7 @@ const Register = () => {
         </h1>
         <p className="text-gray-600 text-lg leading-relaxed">
           Create your account to access personalized AI-powered medical report
-          analysis and track your health journey 💚
+          analysis and track your health journey
         </p>
       </div>
 
@@ -142,9 +142,8 @@ const Register = () => {
           {/* Register Button */}
           <button
             type="submit"
-            className={`w-full bg-[#8bc339] hover:bg-[#7bb32f] py-3 rounded-full text-lg font-semibold text-white cursor-pointer transition-all duration-200 shadow-xl ${
-              loading ? "opacity-70 cursor-not-allowed" : ""
-            }`}
+            className={`w-full bg-[#8bc339] hover:bg-[#7bb32f] py-3 rounded-full text-lg font-semibold text-white cursor-pointer transition-all duration-200 shadow-xl ${loading ? "opacity-70 cursor-not-allowed" : ""
+              }`}
             disabled={loading}
           >
             {loading ? "Registering..." : "Register"}
