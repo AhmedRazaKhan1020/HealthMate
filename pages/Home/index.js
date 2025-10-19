@@ -41,7 +41,7 @@ const WelcomePage = () => {
           href="/Upload"
           className="inline-block bg-[#8bc339] text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-[#7ab631] transition-all"
         >
-          Go to Dashboard
+          Upload Report
         </Link>
       </div>
 
