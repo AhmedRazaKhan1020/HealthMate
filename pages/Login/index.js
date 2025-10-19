@@ -55,7 +55,7 @@ const Login = () => {
   };
 
   return (
-    <section className="min-h-screen relative flex flex-col lg:flex-row items-center justify-center px-6 py-12 bg-gradient-to-br from-green-50 via-white to-green-100 overflow-hidden">
+    <section className="min-h-screen relative flex flex-col lg:flex-row items-center justify-center px-6 py-12 overflow-hidden">
       <ToastContainer position="top-center" hideProgressBar theme="dark" />
 
       {/* Left: Welcome Content */}

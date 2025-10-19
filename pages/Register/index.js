@@ -57,7 +57,7 @@ const Register = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 py-12 bg-gradient-to-br from-green-50 via-white to-green-100">
+    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 py-12 ">
       <ToastContainer position="top-center" hideProgressBar theme="dark" />
 
       {/* Left side: Info Section */}

@@ -76,7 +76,7 @@ const ReportsPage = () => {
             {reports.map((r) => (
               <div
                 key={r._id}
-                className="bg-white shadow-md hover:shadow-green-200 rounded-2xl border border-green-100 p-6 flex flex-col justify-between transition duration-300"
+                className="bg-white shadow-md hover:shadow-gray-200 rounded-2xl border border-green-100 p-6 flex flex-col justify-between transition duration-300"
               >
                 <div>
                   <div className="flex items-center mb-3">

@@ -137,7 +137,7 @@ const WelcomePage = () => {
 
       {/* Footer */}
       <footer className="mt-16 text-sm text-gray-400">
-        Made with 💚 by <span className="text-green-600 font-medium">Ahmed</span>
+        Made with  by <span className="text-green-600 font-medium">Ahmed</span>
       </footer>
     </div>
   );
