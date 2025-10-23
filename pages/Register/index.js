@@ -32,7 +32,7 @@ const Register = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post("https://auth-be-production-9db8.up.railway.app/auth/register", formData);
+      const res = await axios.post("https://auth-be-production.up.railway.app/auth/register", formData);
       if (res.status === 200 || res.status === 201) {
         toast.success("User Registered Successfully!");
         setFormData({

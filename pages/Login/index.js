@@ -30,7 +30,7 @@ const Login = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("https://auth-be-production-9db8.up.railway.app/auth/login", {
+      const res = await fetch("https://auth-be-production.up.railway.app/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

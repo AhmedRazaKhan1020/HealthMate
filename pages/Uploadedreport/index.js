@@ -6,23 +6,32 @@ import { FileText, Loader2, CalendarDays } from "lucide-react";
 import { useRouter } from "next/router";
 
 const ReportsPage = () => {
-  const [reports, setReports] = useState([]);
+  const [reports, setReports] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [token, setToken] = useState(null);
-  
-   const router = useRouter();
-  
-    
-  
+
+  const router = useRouter();
+
   useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    if (!storedToken) {
+      router.push("/"); // redirect to login
+    } else {
+      setToken(storedToken);
+    }
     const fetchReports = async () => {
       try {
-        const res = await axios.get("https://auth-be-production-9db8.up.railway.app/report/");
-        console.log("✅ Reports fetched:", res.data);
-        setReports(res.data);
+        const Token = localStorage.getItem("token")
+        const res = await axios.get("https://auth-be-production.up.railway.app/auth/reports", {
+          headers: {
+            Authorization: `Bearer ${Token}`,
+          },
+        });
+        setReports(res.data.report);
+        console.log(" Reports fetched:", res.data.report);
       } catch (err) {
-        console.error("❌ Error fetching reports:", err.response?.data || err.message);
+        console.error(" Error fetching reports:", err.response?.data || err.message);
         setError("Failed to load reports. Please check backend connection.");
       } finally {
         setLoading(false);
@@ -30,13 +39,7 @@ const ReportsPage = () => {
     };
 
     fetchReports();
- const storedToken = localStorage.getItem("token");
-      if (!storedToken) {
-        router.push("/"); // redirect to login
-      } else {
-        setToken(storedToken);
-      }
-    }, [router]);
+  }, [router]);
 
   if (loading) {
     return (
@@ -46,7 +49,6 @@ const ReportsPage = () => {
     );
   }
 
-
   if (error) {
     return (
       <div className="min-h-screen flex justify-center items-center text-red-600 font-semibold">
@@ -54,20 +56,17 @@ const ReportsPage = () => {
       </div>
     );
   }
-  
 
-      ;
-  
-    if (!token) return null;
+  if (!token) return null;
 
   return (
     <div className="min-h-screen  p-6 ">
       <div className="max-w-6xl mx-auto md:mr-30">
         <h1 className="text-3xl font-bold text-green-700 text-center mb-10">
-           Your Uploaded Reports
+          Your Uploaded Reports
         </h1>
 
-        {reports.length === 0 ? (
+        {reports?.length === 0 ? (
           <div className="text-center text-gray-500 text-lg">
             You haven’t uploaded any reports yet.
           </div>
@@ -109,6 +108,7 @@ const ReportsPage = () => {
               </div>
             ))}
           </div>
+
         )}
       </div>
     </div>
