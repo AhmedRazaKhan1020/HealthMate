@@ -74,7 +74,7 @@ const UploadReport = () => {
     transition-all duration-300
   "
     >
-      <h1 className="text-3xl font-bold text-green-700 text-center mb-10 mr-60">
+      <h1 className="text-3xl font-bold text-green-700 text-center ">
            Upload Your Reports
         </h1>
 
@@ -86,7 +86,7 @@ const UploadReport = () => {
       p-8 
       transition-all duration-300 
       hover:shadow-green-200
-      mx-auto md:ml-10 mt-10
+      mx-auto 
     "
       >
 

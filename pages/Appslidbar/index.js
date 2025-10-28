@@ -37,12 +37,10 @@ const Sidebar = () => {
                 </button>
             </div>
 
-            <div
-                className={`
+            <div className={`
           fixed top-0 left-0 z-40 h-screen w-64 bg-white border-r border-green-200 shadow-md flex flex-col justify-between transform transition-transform duration-300
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          md:translate-x-0  /* always visible on desktop */
-        `}
+          md:translate-x-0`}
             >
                 <div>
                     {/* Logo (Desktop) */}
@@ -58,8 +56,8 @@ const Sidebar = () => {
                                 key={item.name}
                                 href={item.href}
                                 className={`flex items-center gap-3 px-6 py-3 text-sm font-medium rounded-lg mx-2 transition-all ${pathname === item.href
-                                        ? "bg-green-100 text-[#8bc339]"
-                                        : "text-gray-600 hover:bg-green-50 hover:text-[#8bc339]"
+                                    ? "bg-green-100 text-[#8bc339]"
+                                    : "text-gray-600 hover:bg-green-50 hover:text-[#8bc339]"
                                     }`}
                                 onClick={() => setIsOpen(false)}
                             >

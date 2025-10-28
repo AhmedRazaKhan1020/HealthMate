@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div className="antialiased min-h-screen flex">
       {shouldShowSidebar && (
-        <div className="w-64">
+        <div className="w-5">
           <AppSidebar />
         </div>
       )}
