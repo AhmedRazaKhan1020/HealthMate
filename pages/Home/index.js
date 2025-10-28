@@ -151,6 +151,7 @@
 "use client";
 import React from "react";
 import { Upload, Brain, Activity } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const tips = [
@@ -160,7 +161,13 @@ export default function Home() {
     "Eat more fresh fruits and veggies 🍎",
   ];
 
-  const randomTip = tips[Math.floor(Math.random() * tips.length)];
+  
+  const [randomTip, setRandomTip] = useState("");
+
+  useEffect(() => {
+    const random = tips[Math.floor(Math.random() * tips.length)];
+    setRandomTip(random);
+  }, []);
 
   return (
     <div className="min-h-screen text-gray-800 w-full pr-5">
@@ -269,7 +276,9 @@ export default function Home() {
         <h3 className="text-xl font-semibold text-green-700 mb-3">
           💡 Health Tip of the Day
         </h3>
-        <p className="text-gray-700 font-medium">{randomTip}</p>
+         <p className="text-gray-700 font-medium">
+          {randomTip || "Stay healthy and hydrated!"}
+        </p>
       </section>
 
       {/* 🦶 Footer */}
